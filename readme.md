@@ -351,8 +351,9 @@ The Data I get back:
 
 ### Desktop
 <img src='./imgs/desktop-view.png'>
+
 ### Mobile
-<img src="./imgs/movie-view.png">
+<img src="./imgs/Movie-view.png">
 
 ## Schedule of Work
 
