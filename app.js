@@ -13,12 +13,16 @@ fetch(searchedurl)
 
 function renderSearch(search) {
     const searchdiv = document.querySelector('.search')
+    const ul = document.createElement('ul')
     // const emptyArray = []
     for(let a=0 ;a < search.count; a++){
     const emptyArray =[search.results[a].content]
     console.log(emptyArray)
-    searchdiv.innerHTML = `<h1>${emptyArray}</h1>`}
-    
+    const li = document.createElement('li')
+    li.textContent = emptyArray;
+    ul.appendChild(li)}
+    document.body.appendChild(ul)
+    // searchdiv.innerHTML = `<ul>${emptyArray}</ul>`}
 }
 
 // Funciton to handle the search function
