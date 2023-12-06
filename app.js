@@ -2,7 +2,7 @@
 
 function searchQuote(quote) {
 
-const searchedurl = `https://api.quotable.io/search/quotes?query=${quote}`
+const searchedurl = `https://api.quotable.io/quotes?tags=${quote}`
 
 fetch(searchedurl)
 .then((res) => res.json())
@@ -13,9 +13,8 @@ fetch(searchedurl)
 
 function renderSearch(search) {
     const searchdiv = document.querySelector('.search')
-    const fullQuote = JSON.stringify(search.results)
-    
-    searchdiv.innerHTML =`<h1>${fullQuote}</h1>`
+    console.log(search.results[0].content)
+    searchdiv.innerHTML =`<h1>${search.results[0].content}</h1>`
     } 
 
 // Funciton to handle the search function
