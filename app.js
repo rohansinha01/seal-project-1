@@ -1,28 +1,33 @@
-function getQuote(quote) {
+//Function to search a quote with a word
 
+function searchQuote(quote) {
 
-
-const randomurl = 'https://api.quotable.io/quotes/random'
 const searchedurl = `https://api.quotable.io/search/quotes?query=${quote}`
-
-
-fetch(randomurl)
-.then((res) => res.json())
-.then((data) => console.log(data))
-
-
 
 fetch(searchedurl)
 .then((res) => res.json())
 .then((search) => console.log(search))
 }
-function renderQuote(quote) {
-    const quotediv = document.querySelector('.quote')
-    quotediv.innerHTML = 
-    '<h1>quotediv</h1>'
+
+//Function to get a random quote
+function randomQuote() {
+const randomurl = 'https://api.quotable.io/quotes/random'   
+
+fetch(randomurl)
+.then((res) => res.json())
+.then((random) => renderRandom(random))
 }
 
+//Get a random quote to be on the page
+function renderRandom(random) {
+    const quotediv = document.querySelector('.random')
+    quotediv.innerHTML = `<h1>${random[0].content}</h1>`
+}
 
+//Use jQuery to get the random button to work
+function showRandom() {
+    document.querySelectorAll('button')
+}
 
-getQuote('happiness')
-
+//Main Functions
+randomQuote()
