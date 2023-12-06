@@ -13,9 +13,10 @@ fetch(searchedurl)
 
 function renderSearch(search) {
     const searchdiv = document.querySelector('.search')
-    console.log(search.results[0].content)
-    searchdiv.innerHTML =`<h1>${search.results[0].content}</h1>`
-    } 
+
+    for(let a=0 ;a < search.count; a++){
+    searchdiv.innerHTML = `<h1>${search.results[a].content}</h1>`} 
+}
 
 // Funciton to handle the search function
 
@@ -39,12 +40,10 @@ function handleSubmit(event){
     event.preventDefault()
     // grab the form from the event
     const form = event.target
-    console.log(form)
 
     const formData = new FormData(form)
     // grab the search
     const quote = formData.get("quote")
-    console.log(quote)
 
     searchQuote(quote)
 }
