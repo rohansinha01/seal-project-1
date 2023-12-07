@@ -28,15 +28,11 @@ function renderSearch(search) {
     searchdiv.before(ul)
 }
 
-//use of jQuery to move searched list to a different spot on the window
-// $(() => {
-//     const $footer =$(`#footer`)
-//     console.log($footer)
-
-//     const img = $('<img>')
-//     $footer.append($img)
-//     $apisource.img()
-// })
+//use of jQuery to update the tagline
+const tagline = $(`.tagline`)
+const taglineToReplace = tagline.text()
+const newTagline = taglineToReplace.replace("Fall in love with a new cliché... today!", "Fall in love with a new cliché. Today!")
+tagline.text(newTagline)
 
 // Funciton to handle the search function
 
@@ -66,11 +62,14 @@ function handleSubmit(event){
     const quote = formData.get("quote")
 
     searchQuote(quote)
+    
 }
 //Main Functions
 document.querySelector('form').addEventListener('submit', handleSubmit)
 searchQuote()
 randomQuote()
+
+
 
 // if (typeof jQuery == 'undefined'){
 //     console.log('oops! I still have to link my jQuery properly!');
