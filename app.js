@@ -14,24 +14,25 @@ fetch(searchedurl)
 
 function renderSearch(search) {
     if (search.count === 0){
-        alert('There are no quotes for this subject. Not yet at least!')
+        alert('Search out site for one of our clichés!')
     }
-    const searchdiv = document.querySelector('.search')
-    const ul = document.createElement('ul')
-    for(let a=0 ;a < search.count; a++){
-    const emptyArray =[search.results[a].content]
-    const authorArray =[search.results[a].author]
     
+    const searchdiv = document.querySelector('.search')
+
+    const ul = document.createElement('ul')
+       
+    for(let a=0 ;a < search.count; a++){
+    const searchArray =[search.results[a].content]
+    const authorArray =[search.results[a].author]
+  
     // console.log(emptyArray)
     // console.log(authorArray)
    
     const li = document.createElement('li')
-    li.innerHTML = (`${emptyArray} -${authorArray}`);
+    li.innerHTML = (`${searchArray} -${authorArray}`)
     ul.appendChild(li)
     searchdiv.replaceChildren(ul) //makes sure that searching again doesn't add to the list and gives new search results
-
-    
-   
+  
 }}
 
 //use of jQuery to update the tagline
@@ -69,7 +70,7 @@ function handleSubmit(event){
     const quote = formData.get("quote")
 
     searchQuote(quote)
-    
+
 }
 
 
@@ -77,6 +78,7 @@ function handleSubmit(event){
 document.querySelector('form').addEventListener('submit', handleSubmit)
 searchQuote()
 randomQuote()
+
 
 
 
