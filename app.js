@@ -18,9 +18,11 @@ function renderSearch(search) {
     // const emptyArray = []
     for(let a=0 ;a < search.count; a++){
     const emptyArray =[search.results[a].content]
+    const authorArray =[search.results[a].author]
     console.log(emptyArray)
+    console.log(authorArray)
     const li = document.createElement('li')
-    li.textContent = emptyArray;
+    li.textContent = (`${emptyArray} -${authorArray}`);
     ul.appendChild(li)}
     document.body.append(ul)
     searchdiv.before(ul)
@@ -50,7 +52,7 @@ fetch(randomurl)
 //Get a random quote to be on the page
 function renderRandom(random) {
     const quotediv = document.querySelector('.random')
-    quotediv.innerHTML = `<h1>${random[0].content}</h1>`
+    quotediv.innerHTML = `<h1>${random[0].content} -${random[0].author}</h1>`
 }
 // function to handle the form submission
 function handleSubmit(event){
