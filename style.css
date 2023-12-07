@@ -1,5 +1,12 @@
 body {
+    display: flex;
     background-color: lightblue;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    text-align: center;
 }
 
 ul {
@@ -14,15 +21,20 @@ ul {
 li {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
     background-color: white;
-    background-image: linear-gradient(white, yellow);
-    line-break: normal;
-    border-bottom: 4cap solid lightblue;
-    /* border: 2px solid goldenrod */
+    border: 4px solid lightblue;
+    border-radius: 25px;
 }
 
-.tagline {
-    border: 2em goldenrod
+h4 {
+    font-size: 40px;
+}
+
+.random {
+    font-size: large;
+}
+
+@media screen {
+    
 }
