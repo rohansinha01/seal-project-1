@@ -22,7 +22,7 @@ function renderSearch(search) {
     console.log(emptyArray)
     console.log(authorArray)
     const li = document.createElement('li')
-    li.textContent = (`${emptyArray} -${authorArray}`);
+    li.textContent = (`${emptyArray}\n -${authorArray}`);
     ul.appendChild(li)}
     document.body.append(ul)
     searchdiv.before(ul)
@@ -36,7 +36,7 @@ tagline.text(newTagline)
 
 //use of jQuery to add classes to divs
 $('h4').addClass('randomTitle')
-// Funciton to handle the search function
+
 
 // Function to get a random quote
 function randomQuote() {
@@ -68,7 +68,7 @@ function handleSubmit(event){
 }
 //Main Functions
 document.querySelector('form').addEventListener('submit', handleSubmit)
-searchQuote()
+searchQuote('happiness')
 randomQuote()
 
 

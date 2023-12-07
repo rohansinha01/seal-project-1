@@ -1,3 +1,28 @@
+body {
+    background-color: lightblue;
+}
+
 ul {
-    color: blue
+    color: blue;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 40px;
+    padding: 20px
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    background-image: linear-gradient(white, yellow);
+    line-break: normal;
+    border-bottom: 4cap solid lightblue;
+    /* border: 2px solid goldenrod */
+}
+
+.tagline {
+    border: 2em goldenrod
 }
