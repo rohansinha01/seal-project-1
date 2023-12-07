@@ -13,20 +13,18 @@ fetch(searchedurl)
 
 function renderSearch(search) {
     const searchdiv = document.querySelector('.search')
-    const formdiv = document.querySelector('form')
     const ul = document.createElement('ul')
-    // const emptyArray = []
     for(let a=0 ;a < search.count; a++){
     const emptyArray =[search.results[a].content]
     const authorArray =[search.results[a].author]
-    console.log(emptyArray)
-    console.log(authorArray)
+    // console.log(emptyArray)
+    // console.log(authorArray)
+   
     const li = document.createElement('li')
-    li.textContent = (`${emptyArray}\n -${authorArray}`);
-    ul.appendChild(li)}
-    document.body.append(ul)
-    searchdiv.before(ul)
-}
+    li.innerHTML = (`${emptyArray} -${authorArray}`);
+    ul.appendChild(li)
+    searchdiv.replaceChildren(ul)
+}}
 
 //use of jQuery to update the tagline
 const tagline = $(`.tagline`)
@@ -36,7 +34,6 @@ tagline.text(newTagline)
 
 //use of jQuery to add classes to divs
 $('h4').addClass('randomTitle')
-
 
 // Function to get a random quote
 function randomQuote() {
