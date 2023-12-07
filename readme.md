@@ -17,7 +17,7 @@ The api does not require an APIkey to generate data. The api provides the follow
 The specific links I am concerned with for this project are the following:
 
 -`https://api.quotable.io/quotes/random`: This will provide the json array of a random, singular quote for people to stick with
-- `https://api.quotable.io/search/quotes?query=[searched quote]`: This returns a json array with every quote that is connected to the search terms.
+- `https://api.quotable.io/quotes?tags=${quote}`: This returns a json array with every quote that is connected to the search terms.
 
 Sample Feth/Ajax called:
 
