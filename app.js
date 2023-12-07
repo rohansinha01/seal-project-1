@@ -34,6 +34,8 @@ const taglineToReplace = tagline.text()
 const newTagline = taglineToReplace.replace("Fall in love with a new cliché... today!", "Fall in love with a new cliché. Today!")
 tagline.text(newTagline)
 
+//use of jQuery to add classes to divs
+$('h4').addClass('randomTitle')
 // Funciton to handle the search function
 
 // Function to get a random quote
