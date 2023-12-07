@@ -13,6 +13,7 @@ fetch(searchedurl)
 
 function renderSearch(search) {
     const searchdiv = document.querySelector('.search')
+    const formdiv = document.querySelector('form')
     const ul = document.createElement('ul')
     // const emptyArray = []
     for(let a=0 ;a < search.count; a++){
@@ -21,9 +22,19 @@ function renderSearch(search) {
     const li = document.createElement('li')
     li.textContent = emptyArray;
     ul.appendChild(li)}
-    document.body.appendChild(ul)
-    // searchdiv.innerHTML = `<ul>${emptyArray}</ul>`}
+    document.body.append(ul)
+    searchdiv.before(ul)
 }
+
+//use of jQuery to move searched list to a different spot on the window
+// $(() => {
+//     const $footer =$(`#footer`)
+//     console.log($footer)
+
+//     const img = $('<img>')
+//     $footer.append($img)
+//     $apisource.img()
+// })
 
 // Funciton to handle the search function
 
@@ -58,3 +69,7 @@ function handleSubmit(event){
 document.querySelector('form').addEventListener('submit', handleSubmit)
 searchQuote()
 randomQuote()
+
+// if (typeof jQuery == 'undefined'){
+//     console.log('oops! I still have to link my jQuery properly!');
+//   } else {console.log('I did it! I linked jQuery and this js file!')};
