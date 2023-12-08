@@ -2,11 +2,11 @@
 
 function searchQuote(quote) {
 
-const searchedurl = `https://api.quotable.io/quotes?tags=${quote}`
+const searchedurl = `https://api.quotable.io/quotes?tags=${quote}` //link to api that we will pull our data from
 
-fetch(searchedurl)
-.then((res) => res.json())
-.then((search) => renderSearch(search))
+fetch(searchedurl) //fetch our data
+.then((res) => res.json())//put our data in JSON format
+.then((search) => renderSearch(search)) //when we search
 }
 
 
