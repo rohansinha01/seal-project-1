@@ -14,7 +14,7 @@ fetch(searchedurl)
 
 function renderSearch(search) {
     if (search.count === 0){
-        alert('Search out site for one of our clichés!')
+        alert('Search our site for one of our clichés!')
     }
     
     const searchdiv = document.querySelector('.search')
