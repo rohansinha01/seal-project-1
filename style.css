@@ -38,6 +38,9 @@ h4 {
 @media screen and (max-width: 420px){
     body {
         padding: 20px;
+    }
+
+    ul {
         color: navy;
     }
 }
