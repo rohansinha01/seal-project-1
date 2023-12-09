@@ -17,20 +17,20 @@ function renderSearch(search) { //function to get the quotes on the page
         alert('Search our site for one of our clichés!')
     }
     
-    const searchdiv = document.querySelector('.search')
+    const searchdiv = document.querySelector('.search')//adding this line to create a div under the class of search
 
-    const ul = document.createElement('ul')
+    const ul = document.createElement('ul')//adding a unordered list
        
-    for(let a=0 ;a < search.count; a++){
-    const searchArray =[search.results[a].content]
-    const authorArray =[search.results[a].author]
+    for(let a=0 ;a < search.count; a++){ //running a for loop to get all the quotes from a search
+    const searchArray =[search.results[a].content] //getting a list of all the quotes with a searched tag
+    const authorArray =[search.results[a].author] //getting the author of the quote
   
     // console.log(emptyArray)
     // console.log(authorArray)
    
-    const li = document.createElement('li')
-    li.innerHTML = (`${searchArray} -${authorArray}`)
-    ul.appendChild(li)
+    const li = document.createElement('li') //creating listed items for each quote
+    li.innerHTML = (`${searchArray} -${authorArray}`)//adding the actual quote and author to each quote
+    ul.appendChild(li) //putting the quotes all together
     searchdiv.replaceChildren(ul) //makes sure that searching again doesn't add to the list and gives new search results
   
 }}
@@ -45,11 +45,11 @@ tagline.text(newTagline)
 $('h4').addClass('randomTitle')
 
 // Function to get a random quote
-function randomQuote() {
+function randomQuote() { //doing the same thing with the random quote api 
 const randomurl = 'https://api.quotable.io/quotes/random'   
 
-fetch(randomurl)
-.then((res) => res.json())
+fetch(randomurl) 
+.then((res) => res.json()) //
 .then((random) => renderRandom(random))
 }
 
