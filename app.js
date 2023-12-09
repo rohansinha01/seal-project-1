@@ -12,8 +12,8 @@ fetch(searchedurl) //fetch our data
 
 //Get a searched quote to be on the page
 
-function renderSearch(search) {
-    if (search.count === 0){
+function renderSearch(search) { //function to get the quotes on the page
+    if (search.count === 0){//alert statement in case the database doesn't have a quote for the subject
         alert('Search our site for one of our clichés!')
     }
     
@@ -76,7 +76,7 @@ function handleSubmit(event){
 
 //Main Functions
 document.querySelector('form').addEventListener('submit', handleSubmit)
-searchQuote()
+searchQuote('happiness')
 randomQuote()
 
 
