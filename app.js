@@ -76,7 +76,7 @@ function handleSubmit(event){
 
 //Main Functions
 document.querySelector('form').addEventListener('submit', handleSubmit)
-searchQuote('happiness')
+searchQuote()
 randomQuote()
 
 
